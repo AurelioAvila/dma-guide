@@ -8,54 +8,49 @@
       <stop offset="0%" stop-color="#45c5ff" stop-opacity="0.95"/>
       <stop offset="100%" stop-color="#8be5ff" stop-opacity="0.7"/>
     </linearGradient>
-    <style>
-      .bg { fill:url(#background); }
-      .title { font-family:Inter,Segoe UI,Roboto,Arial,sans-serif; font-size:72px; fill:#f2fbff; letter-spacing:0.4px; }
-      .subtitle { font-family:Inter,Segoe UI,Roboto,Arial,sans-serif; font-size:46px; fill:#c2e9ff; font-weight:900; }
-      .caption { font-family:Inter,Segoe UI,Roboto,Arial,sans-serif; font-size:14px; fill:#d2f3ff; opacity:0.9; }
-      .tag { font-family:Inter,Segoe UI,Roboto,Arial,sans-serif; font-size:12px; fill:#eef9ff; letter-spacing:0.2px; text-transform:uppercase; }
-      .card { fill:#0f5e83; opacity:0.92; }
-      .pulse { animation:pulse 3.5s ease-in-out infinite; transform-origin:center center; }
-      .float { animation:float 6s ease-in-out infinite; }
-      @keyframes pulse { 0%,100% { transform:scale(1); opacity:0.72; } 50% { transform:scale(1.06); opacity:1; } }
-      @keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
-    </style>
   </defs>
 
-  <rect class="bg" x="0" y="0" width="1200" height="240" rx="20"/>
+  <!-- Background -->
+  <rect fill="url(#background)" x="0" y="0" width="1200" height="240" rx="20"/>
 
+  <!-- Decorative shapes (static) -->
   <g opacity="0.18">
     <circle cx="1100" cy="40" r="76" fill="#49b8ff"/>
     <circle cx="180" cy="190" r="42" fill="#0c5772"/>
   </g>
 
+  <!-- Text block -->
   <g transform="translate(60,36)">
-    <text class="title">DMA Guide</text>
-    <text class="subtitle" y="90">Realtime DMA security, IOMMU flow, OS control & anti-cheat visibility</text>
-    <text class="caption" y="130">A compact, defensive dashboard for device memory access, isolation and threat-aware design.</text>
+    <text x="0" y="0" font-family="Inter,Segoe UI,Roboto,Arial,sans-serif" font-size="72" fill="#f2fbff">DMA Guide</text>
+    <text x="0" y="90" font-family="Inter,Segoe UI,Roboto,Arial,sans-serif" font-size="46" fill="#c2e9ff" font-weight="900">Realtime DMA security, IOMMU flow, OS control &amp; anti-cheat visibility</text>
+    <text x="0" y="130" font-family="Inter,Segoe UI,Roboto,Arial,sans-serif" font-size="14" fill="#d2f3ff">A compact, defensive dashboard for device memory access, isolation and threat-aware design.</text>
   </g>
 
+  <!-- Card (static) -->
   <g transform="translate(60,154)">
-    <rect class="card" x="0" y="0" width="320" height="80" rx="18"/>
-    <circle cx="30" cy="40" r="16" fill="#4fd1ff" class="pulse"/>
-    <text class="tag" x="58" y="26">Interactive concepts</text>
-    <text class="caption" x="58" y="46">Hover the repo to explore IOMMU, DMA and protection patterns.</text>
+    <rect x="0" y="0" width="320" height="80" rx="18" fill="#0f5e83" opacity="0.92"/>
+    <circle cx="30" cy="40" r="16" fill="#4fd1ff"/>
+    <text x="58" y="30" font-family="Inter,Segoe UI,Roboto,Arial,sans-serif" font-size="12" fill="#eef9ff">Interactive concepts</text>
+    <text x="58" y="50" font-family="Inter,Segoe UI,Roboto,Arial,sans-serif" font-size="14" fill="#d2f3ff">Hover the repo to explore IOMMU, DMA and protection patterns.</text>
   </g>
 
-  <g transform="translate(760,24)" class="float" opacity="0.88">
-    <rect x="0" y="0" width="280" height="140" rx="22" class="card"/>
+  <!-- Right card (static) -->
+  <g transform="translate(760,24)" opacity="0.88">
+    <rect x="0" y="0" width="280" height="140" rx="22" fill="#0f5e83" opacity="0.92"/>
     <rect x="18" y="18" width="104" height="38" rx="12" fill="#12c4ff" opacity="0.95"/>
-    <text class="tag" x="28" y="42">Network</text>
+    <text x="28" y="42" font-family="Inter,Segoe UI,Roboto,Arial,sans-serif" font-size="12" fill="#ffffff">Network</text>
     <rect x="18" y="70" width="118" height="22" rx="10" fill="#0f4f6e"/>
     <rect x="18" y="104" width="90" height="16" rx="8" fill="#0b3f59"/>
-    <circle cx="242" cy="46" r="14" fill="url(#glow)" class="pulse"/>
+    <circle cx="242" cy="46" r="14" fill="url(#glow)"/>
     <circle cx="242" cy="98" r="8" fill="#6ee0ff"/>
   </g>
 
+  <!-- Decorative path -->
   <g transform="translate(420,150)" opacity="0.88">
     <path d="M0,28 C40,12 80,4 120,22 C160,40 200,96 240,74 C280,52 320,18 360,30" fill="none" stroke="#6be7ff" stroke-width="4" stroke-linecap="round"/>
     <circle cx="0" cy="28" r="8" fill="#8cf0ff"/>
     <circle cx="120" cy="22" r="7" fill="#a2f6ff"/>
     <circle cx="360" cy="30" r="9" fill="#88e7ff"/>
   </g>
+
 </svg>
