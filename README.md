@@ -1,4 +1,4 @@
-![DMA Guide cover](assets/cover.svg)
+![DMA Guide cover](assets/cover-v2.svg)
 
 # DMA Guide
 
