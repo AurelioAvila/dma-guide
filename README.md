@@ -1,4 +1,7 @@
-![DMA Guide cover](assets/cover-v2.svg)
+<picture>
+	<source srcset="assets/cover-v2.svg" type="image/svg+xml">
+	<img src="assets/cover-v2.png" alt="DMA Guide cover">
+</picture>
 
 # DMA Guide
 
