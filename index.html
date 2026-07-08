@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DMA Guide</title>
+    <meta
+      name="description"
+      content="A defensive overview of DMA, IOMMU, OS protections, and anti-cheat relevance."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">Security • Systems • Hardware</p>
+        <h1>DMA Guide</h1>
+        <p class="lead">
+          A compact, defensive guide to how DMA works, why it matters, and how modern systems try to contain its risks.
+        </p>
+        <a class="button" href="docs/dma-basics.md">Start reading</a>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>DMA basics</h2>
+          <p>Understand the transfer flow, the actors involved, and why DMA is so useful in hardware design.</p>
+          <a href="docs/dma-basics.md">Open guide</a>
+        </article>
+        <article class="card">
+          <h2>IOMMU and isolation</h2>
+          <p>See how address translation and device domains shape memory protection boundaries.</p>
+          <a href="docs/iommu.md">Open guide</a>
+        </article>
+        <article class="card">
+          <h2>OS and firmware protections</h2>
+          <p>Learn how operating systems and firmware reduce risk around direct device access.</p>
+          <a href="docs/os-protections.md">Open guide</a>
+        </article>
+        <article class="card">
+          <h2>Threat model and use cases</h2>
+          <p>Explore legitimate uses of DMA alongside its relevance to anti-cheat and defensive security.</p>
+          <a href="docs/threat-model.md">Open guide</a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

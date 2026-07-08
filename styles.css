@@ -1,0 +1,85 @@
+:root {
+  color-scheme: dark;
+  --bg: #070b14;
+  --panel: #101726;
+  --text: #e8ecf7;
+  --muted: #9aa4bb;
+  --accent: #5dd1ff;
+  --accent-strong: #7b7cff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, var(--bg), #142033 70%, #0d1422);
+  color: var(--text);
+}
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+.hero {
+  background: rgba(16, 23, 38, 0.92);
+  border: 1px solid rgba(93, 209, 255, 0.2);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  font-size: 0.78rem;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 14px;
+}
+.lead {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 760px;
+  line-height: 1.7;
+}
+.button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 18px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+  color: #07111f;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 22px;
+}
+.card h2 {
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+.card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+.card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr; }
+  .hero { padding: 28px; }
+}
