@@ -28,6 +28,8 @@ This repository is written for engineers and security practitioners who want a p
 - [docs/os-protections.md](docs/os-protections.md) — kernel, firmware, and platform protections
 - [docs/threat-model.md](docs/threat-model.md) — threat modeling and anti-cheat relevance
 - [docs/use-cases.md](docs/use-cases.md) — legitimate use cases and the security controversy around DMA
+- - docs/hardening.md — practical defensive checklist and verification commands
+- docs/references.md — primary sources
 
 ## Why DMA matters
 
@@ -36,3 +38,9 @@ DMA is not inherently malicious — it's a performance feature. What makes it se
 ## Note
 
 This repository is educational and defensive in tone. Use the material to inform system design, threat models, and secure deployment rather than as an attack playbook.
+
+## Related work
+
+Part of a broader security portfolio:
+- [soc-home-lab](https://github.com/AurelioAvila/soc-home-lab) — SOC detection lab
+- [network-traffic-analysis](https://github.com/AurelioAvila/network-traffic-analysis) — Python + Scapy traffic analysis with MITRE mapping
