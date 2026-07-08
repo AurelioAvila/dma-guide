@@ -36,3 +36,9 @@ DMA is not inherently malicious — it's a performance feature. What makes it se
 ## Note
 
 This repository is educational and defensive in tone. Use the material to inform system design, threat models, and secure deployment rather than as an attack playbook.
+
+## Related work
+
+Part of a broader security portfolio:
+- [soc-home-lab](https://github.com/AurelioAvila/soc-home-lab) — SOC detection lab
+- [network-traffic-analysis](https://github.com/AurelioAvila/network-traffic-analysis) — Python + Scapy traffic analysis with MITRE mapping
