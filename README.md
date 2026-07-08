@@ -28,6 +28,8 @@ This repository is written for engineers and security practitioners who want a p
 - [docs/os-protections.md](docs/os-protections.md) — kernel, firmware, and platform protections
 - [docs/threat-model.md](docs/threat-model.md) — threat modeling and anti-cheat relevance
 - [docs/use-cases.md](docs/use-cases.md) — legitimate use cases and the security controversy around DMA
+- - docs/hardening.md — practical defensive checklist and verification commands
+- docs/references.md — primary sources
 
 ## Why DMA matters
 
