@@ -1,30 +1,28 @@
-# What's Behind DMA and How People Use It
+# DMA Guide
 
-DMA sounds simple on paper, but it is one of those mechanisms that quietly sits underneath a lot of modern computing. A peripheral can move data directly to or from system memory without the CPU shuttling every byte itself. That is why DMA is so useful in SSDs, network cards, GPUs, capture devices, and other high-throughput hardware.
+A practical, defensive overview of DMA, IOMMU, operating-system protections, and why DMA matters in security-sensitive environments.
 
-The same feature that makes DMA efficient also makes it interesting from a security point of view. Once a device can talk to memory directly, the usual assumptions about trust and visibility change. That is why DMA matters in discussions about anti-cheat systems, firmware integrity, IOMMU enforcement, and the boundaries between the OS, drivers, and hardware.
+DMA allows a peripheral to move data to or from system memory without the CPU handling every byte itself. That makes it essential for SSDs, network cards, GPUs, capture devices, and other high-throughput hardware. At the same time, it changes the trust boundary of a system: once a device can access memory directly, the OS and firmware must enforce strong isolation rules.
 
-This repository explains the core ideas behind DMA:
-- how a DMA transfer works
+This repository is intended as a compact guide for readers who want to understand:
+- how a DMA transfer works end to end
 - which components participate in the flow
-- how the IOMMU and OS protections shape the threat model
-- where DMA is used legitimately
-- why it becomes controversial in security-sensitive environments
+- why IOMMU matters for isolation
+- what protections the OS and firmware can provide
+- why DMA is relevant in anti-cheat and defensive threat modeling
 
-## What this guide covers
+## What is inside
 
-- DMA fundamentals and transaction flow
-- PCIe, bus mastering, and device-to-memory transfers
-- IOMMU concepts, address translation, and isolation
-- operating-system and firmware protections
-- real-world use cases and threat awareness
+- [docs/dma-basics.md](docs/dma-basics.md) — DMA fundamentals, actors, and transfer flow
+- [docs/iommu.md](docs/iommu.md) — IOMMU concepts, translation domains, and isolation
+- [docs/os-protections.md](docs/os-protections.md) — kernel, firmware, and platform protections
+- [docs/threat-model.md](docs/threat-model.md) — threat modeling and anti-cheat relevance
+- [docs/use-cases.md](docs/use-cases.md) — legitimate use cases and the security controversy around DMA
 
 ## Why DMA matters
 
-DMA is not inherently malicious. It is a performance mechanism. What makes it important is that it changes the trust model: if a device can access memory directly, then the system must enforce strong rules about who can use that path, which addresses are allowed, and how much of the system is exposed.
+DMA is not inherently malicious. It is a performance mechanism. What makes it important is that it changes the assumptions around who can observe or alter memory. In practice, that is why DMA shows up in discussions about device isolation, firmware trust, anti-cheat systems, and system hardening.
 
-That is also why anti-cheat products care so much about DMA. In practice, the concern is not simply that a device can transfer data. The concern is that memory visibility can be expanded through a path that bypasses the normal application-level software flow.
+## Note
 
-## Notes
-
-This repository is educational and defensive in tone. It explains how DMA works and why modern systems rely on hardware and software controls to keep it safe.
+This repository is educational and defensive in tone. The goal is to explain how DMA works and why modern systems rely on hardware and software controls to keep it safe.
