@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0f1724"/>
+      <stop offset="1" stop-color="#081325"/>
+    </linearGradient>
+    <style>
+      .bg{fill:url(#g)}
+      .title{font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;font-size:48px;fill:#cfeeff}
+      .subtitle{font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;font-size:18px;fill:#9fb9d0}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="360" rx="12"/>
+  <g transform="translate(60,80)">
+    <text class="title">DMA Guide</text>
+    <text class="subtitle" y="44">A defensive overview of DMA, IOMMU, OS protections and anti-cheat relevance</text>
+  </g>
+</svg>

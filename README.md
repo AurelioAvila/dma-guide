@@ -1,15 +1,22 @@
+![DMA Guide cover](assets/cover.svg)
+
 # DMA Guide
 
-A practical, defensive overview of DMA, IOMMU, operating-system protections, and why DMA matters in security-sensitive environments.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Topics](https://img.shields.io/badge/topics-systems%2Csecurity%2Chardware-blue)](https://github.com/topics)
 
-DMA allows a peripheral to move data to or from system memory without the CPU handling every byte itself. That makes it essential for SSDs, network cards, GPUs, capture devices, and other high-throughput hardware. At the same time, it changes the trust boundary of a system: once a device can access memory directly, the OS and firmware must enforce strong isolation rules.
+A compact, defensive guide to DMA, IOMMU, operating-system protections, and why DMA matters in security-sensitive environments.
 
-This repository is intended as a compact guide for readers who want to understand:
-- how a DMA transfer works end to end
-- which components participate in the flow
-- why IOMMU matters for isolation
-- what protections the OS and firmware can provide
-- why DMA is relevant in anti-cheat and defensive threat modeling
+DMA allows a peripheral to move data to or from system memory without the CPU handling every byte itself. That makes it essential for SSDs, network cards, GPUs, capture devices, and other high-throughput hardware.
+
+At the same time, DMA shifts the system's trust boundary: devices with direct memory access must be constrained by firmware and OS controls so they cannot read or modify memory they shouldn't.
+
+This repository is written for engineers and security practitioners who want a practical understanding of DMA, how to reason about risk, and which controls matter in real systems.
+
+## Quick start
+
+1. Read the fundamentals: [docs/dma-basics.md](docs/dma-basics.md)
+2. Learn why IOMMU matters: [docs/iommu.md](docs/iommu.md)
+3. Review protections and threat modeling: [docs/os-protections.md](docs/os-protections.md) and [docs/threat-model.md](docs/threat-model.md)
 
 ## What is inside
 
@@ -21,8 +28,8 @@ This repository is intended as a compact guide for readers who want to understan
 
 ## Why DMA matters
 
-DMA is not inherently malicious. It is a performance mechanism. What makes it important is that it changes the assumptions around who can observe or alter memory. In practice, that is why DMA shows up in discussions about device isolation, firmware trust, anti-cheat systems, and system hardening.
+DMA is not inherently malicious — it's a performance feature. What makes it security-relevant is that it provides a path for devices to observe or alter memory outside normal software-mediated channels. Modern platforms mitigate that risk through address translation (IOMMU), firmware validation, driver policies, and runtime kernel protections.
 
 ## Note
 
-This repository is educational and defensive in tone. The goal is to explain how DMA works and why modern systems rely on hardware and software controls to keep it safe.
+This repository is educational and defensive in tone. Use the material to inform system design, threat models, and secure deployment rather than as an attack playbook.
