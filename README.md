@@ -43,5 +43,6 @@ This repository is educational and defensive in tone. Use the material to inform
 
 Part of a broader security portfolio:
 - [soc-home-lab](https://github.com/AurelioAvila/soc-home-lab) — SOC detection lab
+- [detection-engineering-rules](https://github.com/AurelioAvila/detection-engineering-rules) — YARA + Sigma rules with automated true/false-positive testing
 - [network-traffic-analysis](https://github.com/AurelioAvila/network-traffic-analysis) — Python + Scapy traffic analysis with MITRE mapping
 - [ransomware-dfir-timeline](https://github.com/AurelioAvila/ransomware-dfir-timeline) — multi-source DFIR timeline reconstruction, MITRE-mapped
